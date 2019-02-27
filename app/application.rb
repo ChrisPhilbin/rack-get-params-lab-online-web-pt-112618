@@ -23,7 +23,7 @@ class Application
         end
       end
     elsif
-      item_to_add = req.params(item)
+      item_to_add = req.params["item"]
       if @@items.includes?(item_to_add)
         @@cart << item_to add
         resp.write "Added #{item_to_add}"
